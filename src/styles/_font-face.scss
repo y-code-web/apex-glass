@@ -1,0 +1,59 @@
+@font-face {
+    font-family: "Bebas Neue Pro";
+    font-style: normal;
+    font-weight: 400;
+    src:
+        local(""),
+        url("../fonts/BebasNeuePro-SemiExpRegular.woff") format("woff"),
+        url("../fonts/BebasNeuePro-SemiExpRegular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Bebas Neue Pro";
+    font-style: italic;
+    font-weight: 400;
+    src:
+        local(""),
+        url("../fonts/BebasNeuePro-SemiExpItalic.woff") format("woff"),
+        url("../fonts/BebasNeuePro-SemiExpItalic.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Bebas Neue Pro";
+    font-style: normal;
+    font-weight: 500;
+    src:
+        local(""),
+        url("../fonts/BebasNeuePro-Middle.woff") format("woff"),
+        url("../fonts/BebasNeuePro-Middle.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Bebas Neue Pro";
+    font-style: italic;
+    font-weight: 500;
+    src:
+        local(""),
+        url("../fonts/BebasNeuePro-MiddleItalic.woff") format("woff"),
+        url("../fonts/BebasNeuePro-MiddleItalic.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Bebas Neue Pro";
+    font-style: normal;
+    font-weight: 700;
+    src:
+        local(""),
+        url("../fonts/BebasNeuePro-SemiExpBold.woff") format("woff"),
+        url("../fonts/BebasNeuePro-SemiExpBold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Bebas Neue Pro";
+    font-style: italic;
+    font-weight: 700;
+    src:
+        local(""),
+        url("../fonts/BebasNeuePro-SemiExpBoldItalic.woff") format("woff"),
+        url("../fonts/BebasNeuePro-SemiExpBoldItalic.woff2") format("woff2");
+}

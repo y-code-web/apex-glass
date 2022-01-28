@@ -1,0 +1,24 @@
+.phone {
+    &--primary {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        text-decoration: none;
+        .phone__icon {
+            flex-grow: 0;
+            width: 26 / $fontSizeRelative + em;
+            height: 26 / $fontSizeRelative + em;
+            margin-right: 10 / $fontSizeRelative + em;
+            @include media(m, $sm) {
+                margin-right: 15 / $fontSizeRelative + em;
+            }
+        }
+        .phone__link {
+            font-size: var(--h5);
+            color: var(--font-color-gray-light);
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

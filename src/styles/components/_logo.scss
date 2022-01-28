@@ -1,0 +1,21 @@
+.logo {
+    display: inline-block;
+    &--secondary {
+        position: relative;
+        display: block;
+        text-align: center;
+        padding-bottom: 20 / $fontSizeRelative + em;
+        img {
+            max-width: 315 / $fontSizeRelative + em;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            width: 200 / $fontSizeRelative + em;
+            transform: translate(-50%, 0);
+            border-bottom: 1px solid var(--border-color-black);
+        }
+    }
+}

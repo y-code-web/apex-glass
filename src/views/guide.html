@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('./src/partials/head.html')
+    <style>
+        .layout-guide {
+            position: relative;
+            z-index: 9999;
+        }
+        .layout-guide__sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow-y: auto;
+            height: 100%;
+            background-color: black;
+            color: #fff;
+            padding: 20px;
+        }
+        .layout-guide__content {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 280px;
+            right: 0;
+        }
+        .layout-guide__section {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            opacity: 0;
+            visibility: hidden;
+
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-duration: var(--animate-duration);
+            animation-duration: var(--animate-duration);
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+        .layout-guide__section.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .layout-guide__section-in {
+            position: relative;
+            padding: 30px 0;
+            height: 100%;
+            overflow-y: auto;
+        }
+        .layout-guide__list {
+        }
+        .layout-guide__list li {
+        }
+        .layout-guide__list a {
+            display: block;
+            padding: 5px 10px;
+            color: #fff;
+        }
+    </style>
+
+    <body>
+        <div class="layout-guide">
+            <div
+                class="layout-guide__sidebar"
+                style="
+                    height: 100%;
+                    overflow-y: auto;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                "
+            >
+                <div style="width: 220px">
+                    <a
+                        href="/"
+                        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white"
+                    >
+                        <span class="fs-4">Главная</span>
+                    </a>
+                    <hr />
+                    <nav
+                        class="layout-guide__nav"
+                        data-element="switcher-section"
+                    >
+                        <ul class="layout-guide__list">
+                            <li><a href="#greetings">Приветствие</a></li>
+                        </ul>
+                        <ul class="layout-guide__list">
+                            <li><a href="#alert">alert</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="layout-guide__content">
+                <div
+                    class="layout-guide__section visible"
+                    id="greetings"
+                    data-element="section"
+                >
+                    <div class="layout-guide__section-in text-center">
+                        <h1>
+                            Основной гайд файл, здесь представлены компоненты
+                            проекта
+                        </h1>
+                    </div>
+                </div>
+                <div
+                    class="layout-guide__section"
+                    id="alert"
+                    data-element="section"
+                >
+                    <div class="layout-guide__section-in">
+                        <div class="container-fluid">
+                            <h2 class="layout-guide__section-title-guide">
+                                alert
+                            </h2>
+                            <hr style="margin-bottom: 3em" />
+                            <div>
+                                <!-- @@include('./src/partials/components/alert.html') -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include('./src/partials/scripts.html')
+        <script>
+            const animateCSS = (element, animation, prefix = 'animate__') =>
+                // We create a Promise and return it
+                new Promise((resolve, reject) => {
+                    const animationName = `${prefix}${animation}`;
+                    const node =
+                        typeof element === 'string'
+                            ? document.querySelector(element)
+                            : element;
+
+                    node.classList.add(`${prefix}animated`, animationName);
+
+                    // When the animation ends, we clean the classes and resolve the Promise
+                    function handleAnimationEnd(event) {
+                        event.stopPropagation();
+                        node.classList.remove(
+                            `${prefix}animated`,
+                            animationName
+                        );
+                        resolve('Animation ended');
+                    }
+
+                    node.addEventListener('animationend', handleAnimationEnd, {
+                        once: true,
+                    });
+                });
+
+            function hideOtherSections(sections) {
+                Array.prototype.filter.call(sections, function (section) {
+                    if (section.classList.contains('visible')) {
+                        animateCSS(section, 'fadeOutUp').then((message) => {
+                            section.classList.remove('visible');
+                        });
+                    }
+                });
+            }
+            function showCurrentSection(section) {
+                section.classList.add('visible');
+                animateCSS(section, 'fadeInUp').then((message) => {});
+            }
+            function rememberSection(_href) {
+                localStorage.setItem('activeSection', _href);
+            }
+            function showSectionByLocalStorage() {
+                var _href = localStorage.getItem('activeSection'),
+                    section = document.querySelector(_href),
+                    sections = document.querySelectorAll(
+                        '[data-element="section"]'
+                    );
+
+                if (_href) {
+                    hideOtherSections(sections);
+                    showCurrentSection(section);
+                }
+            }
+
+            var links = document.querySelectorAll(
+                '[data-element="switcher-section"] a'
+            );
+
+            Array.prototype.filter.call(links, function (link) {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    var _href = e.currentTarget.getAttribute('href'),
+                        section = document.querySelector(_href),
+                        parent = document.querySelector(_href).parentElement,
+                        sections = parent.querySelectorAll(
+                            '[data-element="section"]'
+                        );
+
+                    hideOtherSections(sections);
+                    showCurrentSection(section);
+                    rememberSection(_href);
+                });
+            });
+
+            showSectionByLocalStorage();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,8 @@
+.footer {
+    &--main {
+        padding: 20 / $fontSizeRelative + em 0 30 / $fontSizeRelative + em;
+        .logo--secondary {
+            max-width: 315 / $fontSizeRelative + em;
+        }
+    }
+}

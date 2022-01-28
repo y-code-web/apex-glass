@@ -1,0 +1,81 @@
+// media queries points
+// ====================
+$xs: 0px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+// ====================
+// ====================
+
+// Font size calculations
+// ====================
+$fontSizeRelative: 15;
+
+$h2Value: 48;
+$h3Value: 30;
+$h4Value: 24;
+$h5Value: 18;
+$textValue: 15;
+
+$h2: $h2Value / #{$fontSizeRelative}rem;
+$h3: $h3Value / #{$fontSizeRelative}rem;
+$h4: $h4Value / #{$fontSizeRelative}rem;
+$h5: $h5Value / #{$fontSizeRelative}rem;
+$text: $textValue / #{$fontSizeRelative}rem;
+// ====================
+// ====================
+
+// colors
+// ====================
+$colorBlack: #2B2A29;
+$colorBlackSecondary: rgba(#2B2A29, .5);
+$colorGray: #9D9E9E;
+$colorGrayLight: #FEFEFE;
+$colorGrayLight2: #F3F3F3;
+$colorOrange: #EC691F;
+// ====================
+// ====================
+
+
+
+// css variables
+// ====================
+:root {
+	--color-black: #{$colorBlack};
+	--color-black-secondary: #{$colorBlackSecondary};
+	--color-gray: #{$colorGray};
+	--color-gray-light: #{$colorGrayLight};
+	--color-gray-light-2: #{$colorGrayLight2};
+	--color-orange: #{$colorOrange};
+
+	--default-font: 'Bebas Neue Pro';
+	--default-font-color: var(--color-black);
+	--default-link-color: var(--color-black);
+	--default-background-color: var(--color-gray-light);
+	--default-border-color: var(--color-gray);
+	--default-font-size: 1rem;
+
+	--font-color-gray: var(--color-gray);
+	--font-color-gray-light: var(--color-gray-light);
+	--font-color-orange: var(--color-orange);
+
+	--background-color-gray-light: var(--color-gray-light);
+	--background-color-black: var(--color-black);
+	--background-color-black-secondary: var(--color-black-secondary);
+	--background-color-orange: var(--color-orange);
+
+	--border-color-black: var(--color-black);
+	--border-color-gray: var(--color-gray);
+	--border-color-gray-light: var(--color-gray-light);
+	--border-color-orange: var(--color-orange);
+	
+	--h2: #{$h2};
+	--h3: #{$h3};
+	--h4: #{$h4};
+	--h5: #{$h5};
+	--text: #{$text};
+}
+// ====================
+// ====================

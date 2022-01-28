@@ -1,0 +1,49 @@
+.header {
+    &--main {
+        // position: relative;
+        .form--search {
+            max-width: 150 / $fontSizeRelative + em;
+            @include media(m, $sm) {
+                max-width: 200 / $fontSizeRelative + em;
+            }
+        }
+
+        .logo--main {
+            max-width: 150 / $fontSizeRelative + em;
+            @include media(m, $sm) {
+                max-width: 175 / $fontSizeRelative + em;
+            }
+        }
+
+        .nav--menu {
+            @include media(m, $lg) {
+                padding-left: 15 / $fontSizeRelative + em;
+                padding-right: 40 / $fontSizeRelative + em;
+            }
+        }
+
+        .phone--primary {
+            @include media(m, $xs) {
+              @include media(d, $lg) {
+                  .phone__icon {
+                      margin-right: 0;
+                  }
+                  .phone__link {
+                      display: none;
+                  }
+              }
+            }
+        }
+
+        .header__main {
+            padding: 12 / $fontSizeRelative + em 0;
+        }
+        
+        .header__sub {
+            position: relative;
+            background-color: var(--background-color-black);
+            padding: 8 / $fontSizeRelative + em 0;
+            border-bottom: 2px solid var(--border-color-orange);
+        }
+    }
+}

@@ -1,0 +1,158 @@
+<div
+    class="modal modal-base fade"
+    id="modal"
+    tabindex="-1"
+    data-bs-focus="false"
+    aria-labelledby="addCategoryLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <form>
+          <div class="modal-header">
+            <h6>Добавление категории</h6>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="tabs tabs--languages">
+              <div class="table-responsive">
+                <ul class="nav nav-tabs" id="myTab-1" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="ru-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#ru"
+                      type="button"
+                      role="tab"
+                      aria-controls="ru"
+                      aria-selected="true"
+                    >
+                      Русский
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="uz-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#uz"
+                      type="button"
+                      role="tab"
+                      aria-controls="uz"
+                      aria-selected="false"
+                    >
+                      Узбекский
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="en-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#en"
+                      type="button"
+                      role="tab"
+                      aria-controls="en"
+                      aria-selected="false"
+                    >
+                      Английский
+                    </button>
+                  </li>
+                  
+                </ul>
+              </div>
+              <div class="tab-content" id="myTabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="ru"
+                  role="tabpanel"
+                  aria-labelledby="ru-tab"
+                >
+                  <div class="mb-3">
+                    <div class="select select-base" id="select-category">
+                      <select
+                        name="state"
+                        data-element="select"
+                        data-placeholder="Выберите категорию"
+                        data-dropdown-parent="#select-category"
+                        data-dropdown-css-class="select__dropdown"
+                      >
+                        <option value=""></option>
+                        <option value="1">Все</option>
+                        <option value="2">Категория 1</option>
+                        <option value="3">Категория 2</option>
+                        <option value="4">Категория 3</option>
+                        <option value="5">Категория 4</option>
+                        <option value="6">Категория 5</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Название категории"
+                    />
+                    <div class="invalid-feedback">Ошибка: необходимо заполнить название</div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="editor editor-base">
+                      <textarea data-element="editor-small" id="editor-1" placeholder="Описание категории"></textarea>
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <div class="form-switch form-switch-base">
+                      <label class="form-switch__label">
+                        <span class="form-switch__label-left">Статус категории</span>
+                        <span class="form-switch__label-center">
+                          <input class="input-hidden" type="checkbox" id="switch-0">
+                          <span class="form-switch__pseudo" for="switch-0"></span>
+                        </span>
+                        <span class="form-switch__label-right">вкл</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="uz"
+                  role="tabpanel"
+                  aria-labelledby="uz-tab"
+                >
+                  ...
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="en"
+                  role="tabpanel"
+                  aria-labelledby="en-tab"
+                >
+                  ...
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="mb-2">
+              <button class="button button-base w-100" type="submit">Сохранить изменения</button>
+            </div>
+            <div class="mb-2">
+              <a
+                class="button button-third w-100"
+                href="#"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                >Назад без сохранения</a
+              >
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

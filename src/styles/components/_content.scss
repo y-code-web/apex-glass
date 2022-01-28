@@ -1,0 +1,10 @@
+.content {
+    &--copy {
+        font-size: var(--h5);
+        // color: var(--font-color-black);
+    }
+    &--copy-secondary {
+        font-size: var(--h5);
+        color: var(--font-color-gray);
+    }
+}

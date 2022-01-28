@@ -1,0 +1,15 @@
+.layout {
+    &--main {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        .layout__content {
+            flex-grow: 1;
+            // min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

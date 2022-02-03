@@ -229,23 +229,27 @@
         }
         .button--nav-secondary {
             position: absolute;
-            top: 50%;
-            transform: translate(0, -50%);
             z-index: 11;
             padding: 10 / $h4Value + em 5 / $h4Value + em;
             font-size: var(--h4);
             color: var(--font-color-gray-light);
+            @include media(d, $sm) {
+                top: 50%;
+                transform: translate(0, -50%);
+            }
             @include media(m, $sm) {
                 left: 50%;
                 transform: translate(-50%, 0) rotate(-90deg);
             }
 
-            &-prev {
-                left: -5 / $fontSizeRelative + em;
-                transform: translate(0, -50%) rotate(-180deg);
-            }
-            &-next {
-                right: -5 / $fontSizeRelative + em;
+            @include media(d, $sm) {
+                &-prev {
+                    left: -5 / $fontSizeRelative + em;
+                    transform: translate(0, -50%) rotate(-180deg);
+                }
+                &-next {
+                    right: -5 / $fontSizeRelative + em;
+                }
             }
             @include media(m, $sm) {
                 &-prev {

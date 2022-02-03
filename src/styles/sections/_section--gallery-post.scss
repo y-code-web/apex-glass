@@ -1,0 +1,16 @@
+.section {
+    &--gallery-post {
+        .section__head {
+            margin-bottom: 20 / $fontSizeRelative + em;
+        }
+        .section__title {
+            max-width: 540 / $fontSizeRelative + em;
+        }
+        .button--nav-prev {
+            margin-right: 25 / $h4Value + em;
+            @include media(m, $md) {
+                margin-right: 45 / $h4Value + em;
+            }
+        }
+    }
+}

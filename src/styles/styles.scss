@@ -15,7 +15,8 @@
 @import 'root';
 
 // animations
-@import 'animations/*.scss';
+// @import 'animations/*.scss';
+@import 'animations';
 
 // Helpers
 @import 'utils/*.scss';
@@ -37,3 +38,20 @@
 
 // Layouts
 @import 'layout';
+
+
+.popup-video {
+    .mfp-content {
+        max-width: 900px;
+    }
+}
+.mfp-iframe {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // box-shadow: 0 0 8px rgb(0 0 0 / 60%);
+    background: #000;
+}

@@ -1,6 +1,7 @@
 .header {
     &--main {
         // position: relative;
+        border-bottom: 1px solid var(--border-color-gray);
         .form--search {
             max-width: 150 / $fontSizeRelative + em;
             @include media(m, $sm) {

@@ -1,0 +1,104 @@
+<header class="header header--main">
+    <div class="header__sub wow animate__fadeIn" data-wow-duration="2s">
+        <div class="container-xxl">
+            <div class="row row-cols-auto justify-content-end align-items-center gy-2 gx-3 gx-lg-auto">
+                <div class="col me-lg-auto">
+                    <a class="phone phone--primary" href="tel:+998911234567">
+                        <img class="phone__icon" src="img/icon-phone.svg" alt="">
+                        <span class="phone__link">+998(91) 123-45-67</span>
+                    </a>
+                </div>
+                <div class="col">
+                    <div class="form form--search">
+                        <button
+                            class="form__button-toggle-visibility d-lg-none"
+                            type="button"
+                            data-element="toggle"
+                            data-target="search"
+                        >
+                            <svg class='svg-icon'>
+                              <use xlink:href='img/svgSprite.svg#icon-search'></use>
+                            </svg>
+                        </button>
+                        <form class="form__form" action="/search" method="GET" id="search">
+                            <button
+                                class="form__button-toggle-hidden d-lg-none"
+                                type="button"
+                                data-element="toggle"
+                                data-target="search"
+                            >
+                                <svg class='svg-icon'>
+                                  <use xlink:href='img/svgSprite.svg#icon-arrow'></use>
+                                </svg>
+                            </button>
+                            <div class="form__in">
+                                <input class="form__input" type="search" placeholder="Поиск">
+                                <button class="form__submit" type="submit">
+                                    <svg class='svg-icon'>
+                                      <use xlink:href='img/svgSprite.svg#icon-search'></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col">
+                    <a class="button button--primary" data-bs-toggle="modal" data-bs-target="#modal-request" href="#">Заказать звонок</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header__main wow animate__fadeIn" data-wow-duration="2s">
+        <div class="container-xxl">
+            <div class="row row-cols-auto align-items-center justify-content-end">
+                <div class="col me-auto order-1">
+                    <a class="logo logo--main" href="/">
+                        <img src="img/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="flex-lg-grow-1 col order-3 order-lg-2">
+                    <button
+                        class="button button--toggle-open d-lg-none"
+                        data-element="toggle"
+                        data-target="menu"
+                        type="button"
+                    >
+                        <svg class='svg-icon'>
+                          <use xlink:href='img/svgSprite.svg#icon-menu'></use>
+                        </svg>
+                    </button>
+                    <nav class="nav nav--menu nav--menu-adaptive" id="menu">
+                        <button
+                            class="button button--toggle-close d-lg-none"
+                            data-element="toggle"
+                            data-target="menu"
+                            type="button"
+                        >
+                            <svg class='svg-icon'>
+                            <use xlink:href='img/svgSprite.svg#icon-close'></use>
+                            </svg>
+                        </button>
+                        <ul>
+                            <li><a href="main">Главная</a></li>
+                            <li><a href="main">О нас</a></li>
+                            <li><a href="main">Закалённое</a></li>
+                            <li><a href="main">Стеклопакеты</a></li>
+                            <li><a href="main">Триплекс</a></li>
+                            <li><a href="main">Новости</a></li>
+                            <li><a href="main">Инновации</a></li>
+                            <li><a href="main">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col flex-shrink-0 order-2 order-lg-3">
+                    <div class="list list--lang">
+                        <ul>
+                            <li><a class="active" href="#">RU</a></li>
+                            <li><a href="#">UZ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

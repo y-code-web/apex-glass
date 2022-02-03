@@ -38,6 +38,7 @@
         a {
             position: relative;
             display: block;
+            font-family: var(--font-2);
             font-size: var(--h5);
             text-decoration: none;
             padding: 5 / $h5Value + em;
@@ -124,6 +125,111 @@
             .button--toggle-close {
                 transition: .2s linear .4s;
                 transform: translate(0, 0);
+            }
+        }
+    }
+    &--posts {
+        border-bottom: 1px solid var(--border-color-gray);
+        @include media(m, $xxl) {
+            position: relative;
+            border-top: 1px solid var(--border-color-gray);
+            border-bottom: 1px solid var(--border-color-gray);
+            &:before, &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translate(0, -50%);
+                right: 100%;
+                border-right: 25px solid var(--border-color-gray);
+                border-top: 29px solid transparent;
+                border-bottom: 29px solid transparent;
+            }
+            &:after {
+                border-right: 25px solid #fff;
+                margin-right: -1px;
+            }
+        }
+        .nav__in {
+            width: 100%;
+            @include media(m, $sm) {
+                display: flex;
+                flex-wrap: nowrap;
+            }
+            @include media(m, $xxl) {
+                &:before, &:after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    left: 100%;
+                    border-left: 25px solid var(--border-color-gray);
+                    border-top: 29px solid transparent;
+                    border-bottom: 29px solid transparent;
+                }
+                &:after {
+                    border-left: 25px solid #fff;
+                    margin-left: -1px;
+                }
+            }
+        }
+        a {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8 / $fontSizeRelative + em;
+            
+            font-size: var(--h4);
+            color: var(--font-color-black);
+            font-family: var(--font-2);
+            font-weight: 400;
+            text-decoration: none;
+            text-align: center;
+            @include media(m, $sm) {
+                width: 33.3%;
+            }
+            @include media(m, $xxl) {
+                margin-top: -1px;
+                margin-bottom: -1px;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    left: 100%;
+                    border-left: 25 / $h4Value + em solid transparent;
+                    border-top: 29 / $h4Value + em solid transparent;
+                    border-bottom: 29 / $h4Value + em solid transparent;
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    right: 100%;
+                    border-right: 25 / $h4Value + em solid transparent;
+                    border-top: 29 / $h4Value + em solid transparent;
+                    border-bottom: 29 / $h4Value + em solid transparent;
+                }
+            }
+            &.active {
+                background-color: var(--background-color-orange);
+                color: var(--font-color-gray-light);
+                @include media(m, $xxl) {
+                    &:before {
+                        border-left-color: var(--background-color-orange);
+                    }
+                    &:after {
+                        border-right-color: var(--background-color-orange);
+                    }
+                    &:first-child {
+                        left: -1px;
+                    }
+                    &:last-child {
+                        right: -1px;
+                    }
+                }
             }
         }
     }

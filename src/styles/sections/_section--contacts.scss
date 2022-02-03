@@ -1,0 +1,15 @@
+.section {
+    &--contacts {
+        padding: 0;
+        @include media(m, $lg) {
+            padding: 30 / $fontSizeRelative + em 0 0;
+        }
+        .section__content {
+            padding: 20 / $fontSizeRelative + em 50 / $fontSizeRelative + em;
+            background-color: var(--background-color-black);
+        }
+        .map {
+            
+        }
+    }
+}

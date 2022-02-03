@@ -1,0 +1,19 @@
+.section {
+    &--about {
+        .section__img {
+            @include media(m, $md) {
+                @include media(d, $xxl + 1) {
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    max-width: calc(50% - var(--bs-gutter-x) * .5);
+                    width: 100%;
+                }
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

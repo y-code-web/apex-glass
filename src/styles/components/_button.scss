@@ -1,9 +1,12 @@
 .button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     &--primary {
         padding: 3 / $h5Value + em 10 / $h5Value + em;
         min-height: 30 / $h5Value + em;
 
+        font-family: var(--font-2);
         font-size: var(--h5);
         color: var(--font-color-gray-light);
         text-decoration: none;
@@ -39,5 +42,97 @@
         @extend .button-clear;
         color: var(--font-color-gray-light);
         font-size: var(--h4);
+    }
+    &--base {
+        @extend .button--primary;
+        font-size: var(--h4);
+        min-height: 50 / $h4Value + em;
+        @include media(m, $xl) {
+          padding-left: 65 / $h4Value + em;
+          padding-right: 65 / $h4Value + em;
+        }
+    }
+    &--secondary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 50 / $h5Value + em;
+        padding: 5 / $fontSizeRelative + em 15 / $fontSizeRelative + em;
+
+        font-size: var(--h5);
+        line-height: 1;
+        color: var(--font-color-gray-light);
+        text-decoration: none;
+
+        background-color: var(--background-color-black);
+        .svg-icon {
+            margin-left: 1em;
+            font-size: var(--h4);
+        }
+        &:hover {
+            color: var(--font-color-gray-light);
+            text-decoration: none;
+            @extend .box-shadow-1;
+        }
+    }
+    &--secondary-main {
+        @extend .button--secondary;
+        background-color: var(--background-color-orange);
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    &--secondary-card {
+        font-size: var(--h5);
+        min-height: 35 / $h5Value + em;
+        padding: 5 / $h5Value + em 30 / $h5Value + em;
+        font-family: var(--font-2);
+        @extend .button--secondary;
+    }
+    &--nav {
+        width: 45 / $fontSizeRelative + em;
+        height: 45 / $fontSizeRelative + em;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid var(--border-color-gray);
+        
+        color: var(--font-color-gray);
+        
+        background-color: transparent;
+        border-radius: 50%;
+        @include media(m, $md) {
+            width: 65 / $h5Value + em;
+            height: 65 / $h5Value + em;
+            font-size: var(--h5);
+        }
+        .svg-icon {
+            flex-shrink: 0;
+        }
+        &:hover {
+            &:not([aria-disabled="true"]) {
+                @extend .box-shadow-2;
+                cursor: pointer;
+            }
+        }
+        &[aria-disabled="true"] {
+            opacity: 0.3;
+        }
+    }
+    &--nav-prev {
+        transform: rotate(-180deg);
+    }
+    &--third {
+        @extend .button--secondary-main;
+        min-height: 40 / $h5Value + em;
+        border-radius: 6px;
+        border: none;
+        font-family: var(--font-2);
+    }
+    &--modal-close {
+        position: absolute;
+        top: 1em;
+        right: 1em;
     }
 }

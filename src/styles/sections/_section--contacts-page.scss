@@ -1,0 +1,35 @@
+.section {
+    &--contacts-page {
+        @extend .section--contacts;
+        .section__content {
+            background-color: transparent;
+            padding-top: 0;
+        }
+        .content {
+            max-width: 335 / $fontSizeRelative + em;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--font-color-black);
+            a {
+                color: var(--font-color-black);
+            }
+        }
+        .form--request {
+            max-width: 420 / $fontSizeRelative + em;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .map {
+            height: 300 / $fontSizeRelative + em;
+            @include media(m, $lg) {
+                height: 560 / $fontSizeRelative + em;
+            }
+        }
+        .section__contacts-info {
+            padding: 30 / $fontSizeRelative + em 0;
+            @include media(m, $lg) {
+                margin-bottom: 10 / $fontSizeRelative + em;
+            }
+        }
+    }
+}

@@ -1,5 +1,6 @@
 .form {
     &--search {
+        font-family: var(--font-2);
         .form__input {
             @include media(m, $xs) {
               @include media(d, $lg) {
@@ -12,6 +13,7 @@
             border: 1px solid var(--border-color-gray);
             min-height: 30 / $h5Value + em;
 
+            // font-family: var(--font-1);
             font-size: var(--h5);
             line-height: 1;
             color: var(--font-color-gray);
@@ -19,6 +21,7 @@
             border-radius: 3px;
             background-color: transparent;
             @include iph() {
+                // font-family: var(--font-1);
                 font-size: var(--h5);
                 line-height: 1;
                 color: var(--font-color-gray);
@@ -101,6 +104,48 @@
                       transform: translate(0, 0);
                   }
                 }
+            }
+        }
+    }
+    &--request {
+        text-align: center;
+        padding: 30 / $fontSizeRelative + em;
+        border-radius: 8px;
+        background-color: var(--background-color-gray-light);
+        @extend .box-shadow-2;
+        .form__head {
+            margin-bottom: 24 / $fontSizeRelative + em;
+        }
+        h3 {
+            font-family: var(--font-2);
+            font-weight: 700;
+            margin-bottom: 24 / $h3Value + em;
+        }
+        .button {
+            width: 100%;
+        }
+        .form__group {
+            text-align: left;
+            margin-bottom: 24 / $fontSizeRelative + em;
+        }
+        label {
+            display: block;
+            margin-bottom: 5 / $fontSizeRelative + em;
+        }
+        input {
+            width: 100%;
+            height: 42 / $fontSizeRelative + em;
+            padding: 5 / $fontSizeRelative + em 15 / $fontSizeRelative + em;
+            
+            font-size: 15 / $fontSizeRelative + em;
+            color: var(--font-color-black);
+            border-radius: 6px;
+            background-color: var(--background-color-gray-light);
+            border: 1px solid var(--border-color-gray);
+            @extend .box-shadow-3;
+            &:focus {
+                @extend .box-shadow-2;
+                outline: none;
             }
         }
     }

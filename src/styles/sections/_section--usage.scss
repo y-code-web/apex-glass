@@ -1,0 +1,13 @@
+.section {
+    &--usage {
+        color: var(--font-color-gray-light);
+        background-color: var(--background-color-black);
+        .title {
+            margin-bottom: 30 / $h3Value + em;
+        }
+        p {
+            max-width: 1000 / $fontSizeRelative + em;
+            margin-bottom: 20 / $textValue + em;
+        }
+    }
+}

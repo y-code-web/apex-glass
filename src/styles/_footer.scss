@@ -1,6 +1,8 @@
 .footer {
+    margin-top: auto;
     &--main {
-        padding: 20 / $fontSizeRelative + em 0 30 / $fontSizeRelative + em;
+        padding: 30 / $fontSizeRelative + em 0;
+        border-top: 1px solid var(--border-color-gray);
         .logo--secondary {
             max-width: 315 / $fontSizeRelative + em;
         }

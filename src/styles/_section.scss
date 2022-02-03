@@ -1,3 +1,30 @@
 .section {
-
+    padding: 25 / $fontSizeRelative + em 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    @include media(m, $lg) {
+        padding: 50 / $fontSizeRelative + em 0;
+    }
 }
+
+@import 'sections/section--main';
+@import 'sections/section--about';
+@import 'sections/section--gallery';
+@import 'sections/section--advantages';
+@import 'sections/section--news';
+@import 'sections/section--contacts';
+@import 'sections/section--front';
+@import 'sections/section--usage';
+@import 'sections/section--advantages-post';
+@import 'sections/section--possibilities';
+@import 'sections/section--gallery-post';
+@import 'sections/section--content-post';
+@import 'sections/section--contacts-page';
+@import 'sections/section--404';
+@import 'sections/section--list-news';
+@import 'sections/section--post-news';
+@import 'sections/section--front-about';
+@import 'sections/section--gallery-about';
+@import 'sections/section--specific';
+@import 'sections/section--video-gallery';

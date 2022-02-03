@@ -1,0 +1,26 @@
+.section {
+    &--front {
+        // padding-top: 15 / $fontSizeRelative + em;
+        padding: 0;
+        .section__img {
+            width: 100%;
+            flex-grow: 0;
+            @include media(m, $md) {
+                max-width: 400px;
+            }
+            @include media(m, $xl) {
+                max-width: 580px;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .section__content {
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+        .nav--posts {
+            margin-top: 15 / $fontSizeRelative + em;
+        }
+    }
+}

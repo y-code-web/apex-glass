@@ -1,0 +1,46 @@
+.section {
+    &--front-about {
+        padding-bottom: 0;
+        .section__content {
+            position: relative;
+            min-height: 460 / $fontSizeRelative + em;
+            @include media(m, $xxl) {
+              padding-top: 20 / $fontSizeRelative + em;
+            }
+            h2 {
+                margin-bottom: 20 / $h2Value + em;
+            }
+            h3 {
+                font-weight: 700;
+                font-family: var(--font-2);
+                margin-bottom: 25 / $h3Value + em;
+            }
+            p {
+                line-height: 25 / $textValue;
+            }
+        }
+        .section__company-name {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 580 / $fontSizeRelative + em;
+            height: 510 / $fontSizeRelative + em;
+            opacity: 0.1;
+            
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            @include media(m, $md) {
+                left: auto;
+                right: 0;
+            }
+        }
+        .section__content-about {
+            max-width: 640 / $fontSizeRelative + em;
+            margin-bottom: 30 / $fontSizeRelative + em;
+            @include media(m, $xxl) {
+                margin-bottom: 60 / $fontSizeRelative + em;
+            }
+        }
+    }
+}

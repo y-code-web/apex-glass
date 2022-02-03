@@ -1,0 +1,13 @@
+.section {
+    &--video-gallery {
+        color: var(--font-color-gray-light);
+        background-color: var(--background-color-black);
+        h2 {
+            // margin-bottom: 35 / $h2Value + em;
+            margin-bottom: 0;
+            @include media(d, $sm) {
+              margin-bottom: 20 / $h2Value + em;
+            }
+        }
+    }
+}

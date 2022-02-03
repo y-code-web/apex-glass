@@ -1,0 +1,32 @@
+.section {
+    &--gallery {
+        @include media(m, $lg) {
+            padding: 0 0 100 / $fontSizeRelative + em;
+        }
+        .section__background {
+            position: relative;
+            background-color: var(--background-color-black);
+            padding: 60 / $fontSizeRelative + em 0 45 / $fontSizeRelative + em;
+            @include media(m, $xxl + 1) {
+                padding: 50 / $fontSizeRelative + em 0;
+            }
+        }
+        .button--secondary-main {
+            @include media(m, $lg) {
+                margin-top: 25 / $fontSizeRelative + em;
+            }
+        }
+        .section__carousel {
+            @include media(m, $lg) {
+                @include media(d, $xxl + 1) {
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(0, -40%);
+                    right: 0;
+                    width: 100%;
+                    max-width: 72%;
+                }
+            }
+        }
+    }
+}

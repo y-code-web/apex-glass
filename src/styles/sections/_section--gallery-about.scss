@@ -1,0 +1,8 @@
+.section {
+    &--gallery-about {
+        @extend .section--gallery-post;
+        h2 {
+            margin-bottom: 10 / $h2Value + em;
+        }
+    }
+}

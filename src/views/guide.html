@@ -89,7 +89,7 @@
                             <li><a href="#greetings">Приветствие</a></li>
                         </ul>
                         <ul class="layout-guide__list">
-                            <li><a href="#alert">alert</a></li>
+                            <li><a href="#card">card</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -109,17 +109,17 @@
                 </div>
                 <div
                     class="layout-guide__section"
-                    id="alert"
+                    id="card"
                     data-element="section"
                 >
                     <div class="layout-guide__section-in">
                         <div class="container-fluid">
                             <h2 class="layout-guide__section-title-guide">
-                                alert
+                                card
                             </h2>
                             <hr style="margin-bottom: 3em" />
                             <div>
-                                <!-- @@include('./src/partials/components/alert.html') -->
+                                @@include('./src/partials/components/card.html')
                             </div>
                         </div>
                     </div>
@@ -193,7 +193,7 @@
                     e.preventDefault();
                     var _href = e.currentTarget.getAttribute('href'),
                         section = document.querySelector(_href),
-                        parent = document.querySelector(_href).parentElement,
+                        parent = section.parentElement,
                         sections = parent.querySelectorAll(
                             '[data-element="section"]'
                         );

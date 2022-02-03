@@ -27,19 +27,24 @@
 		"select2": "^4.1.0-rc.0",
 		"sortablejs": "^1.14.0",
 		"svg4everybody": "^2.1.9",
-		"swiper": "^7.0.0"
+		"swiper": "^7.0.0",
+		"wow.js": "^1.2.2"
 	},
 	"overrides": {
 		"jquery": {
 			"ignore": false,
 			"main": "dist/jquery.min.js"
 		},
+		"wow.js": {
+			"ignore": false,
+			"main": "dist/wow.js"
+		},
 		"svg4everybody": {
 			"ignore": false,
 			"main": "dist/svg4everybody.min.js"
 		},
 		"swiper": {
-			"ignore": true,
+			"ignore": false,
 			"main": "swiper-bundle.min.js"
 		},
 		"choices.js": {
@@ -50,7 +55,7 @@
 			"main": "dist/jquery.inputmask.js"
 		},
 		"bootstrap": {
-			"ignore": true,
+			"ignore": false,
 			"main": "dist/js/bootstrap.bundle.min.js"
 		},
 		"@popperjs/core": {
@@ -82,7 +87,7 @@
 			]
 		},
 		"magnific-popup": {
-			"ignore": true,
+			"ignore": false,
 			"main": [
 				"dist/jquery.magnific-popup.min.js"
 			]

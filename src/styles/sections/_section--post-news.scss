@@ -1,0 +1,28 @@
+.section {
+    &--post-news {
+        .section__wrap {
+            max-width: 640 / $fontSizeRelative + em;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .section__date {
+            font-family: var(--font-2);
+            font-size: var(--h5);
+            margin-bottom: 10 / $h4Value + em;
+            @include media(m, $lg) {
+                font-size: var(--h4);
+            }
+        }
+        .section__head {
+            margin-bottom: 20 / $fontSizeRelative + em;
+            h3 {
+                font-family: var(--font-2);
+                font-weight: 700;
+                margin-bottom: 30 / $h3Value + em;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

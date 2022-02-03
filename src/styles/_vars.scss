@@ -31,6 +31,7 @@ $text: $textValue / #{$fontSizeRelative}rem;
 // ====================
 $colorBlack: #2B2A29;
 $colorBlackSecondary: rgba(#2B2A29, .5);
+$colorBlackThird: rgba(#000, .55);
 $colorGray: #9D9E9E;
 $colorGrayLight: #FEFEFE;
 $colorGrayLight2: #F3F3F3;
@@ -45,25 +46,32 @@ $colorOrange: #EC691F;
 :root {
 	--color-black: #{$colorBlack};
 	--color-black-secondary: #{$colorBlackSecondary};
+	--color-black-third: #{$colorBlackThird};
 	--color-gray: #{$colorGray};
 	--color-gray-light: #{$colorGrayLight};
 	--color-gray-light-2: #{$colorGrayLight2};
 	--color-orange: #{$colorOrange};
+	--font-1: 'Montserrat';
+	--font-2: 'Bebas Neue Pro';
 
-	--default-font: 'Bebas Neue Pro';
+	--default-font: var(--font-1);
 	--default-font-color: var(--color-black);
 	--default-link-color: var(--color-black);
 	--default-background-color: var(--color-gray-light);
 	--default-border-color: var(--color-gray);
 	--default-font-size: 1rem;
 
+	--font-color-black: var(--color-black);
 	--font-color-gray: var(--color-gray);
 	--font-color-gray-light: var(--color-gray-light);
 	--font-color-orange: var(--color-orange);
 
 	--background-color-gray-light: var(--color-gray-light);
+	--background-color-gray-light-2: var(--color-gray-light-2);
+	--background-color-gray: var(--color-gray);
 	--background-color-black: var(--color-black);
 	--background-color-black-secondary: var(--color-black-secondary);
+	--background-color-black-third: var(--color-black-third);
 	--background-color-orange: var(--color-orange);
 
 	--border-color-black: var(--color-black);

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include("./src/partials/head.html")
+  <title>About</title>
+
+  <body>
+    <div class="layout layout--main" id="app">
+      @@include("./src/partials/header/header.html")
+      
+      <div class="layout__content">
+        @@include("./src/partials/section/section--front-about.html")
+        @@include("./src/partials/section/section--gallery-about.html")
+        @@include("./src/partials/section/section--video-gallery.html")
+        @@include("./src/partials/section/section--specific.html")
+      </div>
+
+      @@include("./src/partials/footer/footer.html")
+    </div>
+    @@include('./src/partials/scripts.html')
+  </body>
+</html>

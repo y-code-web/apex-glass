@@ -28,7 +28,7 @@
             }
         }
         .card--news-secondary {
-            flex-direction: column;
+            // flex-direction: column;
         }
         .card__img {
             @include media(d, $lg) {

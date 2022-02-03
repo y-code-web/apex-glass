@@ -14,30 +14,5 @@
       @@include("./src/partials/footer/footer.html")
     </div>
     @@include('./src/partials/scripts.html')
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=8156bbaf-4307-4049-9f36-9e471f897413" type="text/javascript"></script>
-    <script>
-      ymaps.ready(init);
-
-      function init() {
-          var myMap = new ymaps.Map("map", {
-                  center: [41.309339, 69.239568],
-                  zoom: 13,
-                  controls: ['zoomControl']
-              });
-
-          var point = new ymaps.Placemark(myMap.getCenter(), {
-              hintContent: 'наш адрес "г. Ташкент. ул Амира Тимура. дом 15"',
-              balloonContent: 'наш адрес "г. Ташкент. ул Амира Тимура. дом 15"'
-          }, {
-              iconLayout: 'default#image',
-              iconImageHref: '../img/icon-loc.svg',
-              iconImageSize: [34, 40],
-          });
-
-          myMap.geoObjects.add(point);
-          myMap.behaviors.disable('scrollZoom');
-              
-      }
-    </script>
   </body>
 </html>

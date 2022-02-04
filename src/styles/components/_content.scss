@@ -236,6 +236,28 @@
         // }
     }
     &--post {
+        &:not(.content--front) {
+            position: relative;
+            min-height: 590 / $fontSizeRelative + em;
+        }
+        .content__company-name {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            width: 630 / $fontSizeRelative + em;
+            height: 590 / $fontSizeRelative + em;
+
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            opacity: 0.1;
+            @include media(m, $lg) {
+                left: auto;
+                right: 0;
+            }
+        }
         h5 {
             font-weight: 700;
             margin-bottom: 10 / $h5Value + em;

@@ -2,6 +2,18 @@
     &--front {
         // padding-top: 15 / $fontSizeRelative + em;
         padding: 0;
+        .section__direction {
+            &.reverse {
+                .row {
+                    @extend .flex-row-reverse;
+                }
+                .section__content {
+                    @include media(m, $lg) {
+                        padding-top: 50 / $fontSizeRelative + em;
+                    }
+                }
+            }
+        }
         .section__img {
             width: 100%;
             flex-grow: 0;
@@ -10,9 +22,11 @@
             }
             @include media(m, $xl) {
                 max-width: 580px;
+                height: 440 / $fontSizeRelative + em;
             }
             img {
                 width: 100%;
+                height: 100%;
             }
         }
         .section__content {

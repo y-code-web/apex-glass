@@ -2,6 +2,9 @@
     &--front {
         // padding-top: 15 / $fontSizeRelative + em;
         padding: 0;
+        @include media(m, $lg) {
+            padding: 0;
+        }
         .section__direction {
             &.reverse {
                 .row {

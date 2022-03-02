@@ -1,6 +1,7 @@
 .header {
     &--main {
-        // position: relative;
+        position: relative;
+        z-index: 3;
         border-bottom: 1px solid var(--border-color-gray);
         .form--search {
             max-width: 150 / $fontSizeRelative + em;
@@ -38,6 +39,7 @@
 
         .header__main {
             padding: 12 / $fontSizeRelative + em 0;
+            background-color: var(--background-color-gray-light);
         }
         
         .header__sub {
@@ -46,5 +48,11 @@
             padding: 8 / $fontSizeRelative + em 0;
             border-bottom: 2px solid var(--border-color-orange);
         }
+
+        // & + .layout__content {
+        //     .section--main {
+        //         margin-top: -122 / $fontSizeRelative + em;
+        //     }
+        // }
     }
 }
